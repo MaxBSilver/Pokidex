@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 import { PokemonList } from '../components';
-import { PokemonDetailsDialog } from '../components/PokemonDetails';
+import { Outlet } from 'react-router-dom';
 
 export const ListPage = () => {
   const classes = useStyles();
@@ -8,7 +8,7 @@ export const ListPage = () => {
   return (
     <div className={classes.root}>
       <PokemonList />
-      <PokemonDetailsDialog />
+      <Outlet />
     </div>
   );
 };
